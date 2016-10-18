@@ -13,3 +13,7 @@
 
 Route::get('/','IndexController@index');
 Route::resource('job','JobController');
+
+
+
+Route::get('admin','AdminController@index');
