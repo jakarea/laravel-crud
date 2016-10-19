@@ -240,7 +240,7 @@
 	   		@foreach($jobs as $job)
 		   		<div class="col_1">
 		   	        <div class="col-sm-4 row_2">
-						<a href="single.html"><img src="http://www.jobportal.dev/assets/images/a{!! rand(1,6);!!}.jpg" class="img-responsive" alt=""></a>
+						<a href="single.html">{!! Html::image('assets/images/a'.rand(1,6).'.jpg','',array('class'=>'img-responsive')) !!}</a>
 					</div>
 					<div class="col-sm-8 row_1">
 						<h4><a href="{!! url('job/'.$job->job_id) !!}">{!! $job->jobtitle !!}</a></h4>

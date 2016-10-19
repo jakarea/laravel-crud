@@ -14,9 +14,9 @@ class JobsTableSeeder extends Seeder
     {
     	require_once('vendor/fzaninotto/faker/src/autoload.php');
     	$faker = Faker\Factory::create();
-    	for ($i=0; $i < 1; $i++) {
-    		$salary 	= $faker->numberBetween($min = 8000, $max = 209000);
-    		$education 	= ['Minimum Bsc in cse','Not important', 'Maters from any reputed university'];
+    	for ($i=0; $i < 49; $i++) {
+    		$salary 	= $faker->numberBetween($min = 8000, $max = 10000);
+    		$education 	= ['Minimum Bsc in cse','Not important', 'Maters from any reputed university','Bcom','Higher secondary pass'];
     		$k = array_rand($education);
 			$education = $education[$k];
 	        DB::table('jobs')->insert([
