@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     public function index(){
     	$jobs= Job::orderBy('job_id','desc')->take(10)->get();
-    	$todaysJobs =  Job::orderBy('job_id','desc')->where('created_at', '=', Carbon::today())->get();
+    	$todaysJobs =  Job::orderBy('job_id','desc')->where('created_at', '>', Carbon::today())->take(10)->get();
     	return view('index',compact('jobs','todaysJobs'));
     }
 }

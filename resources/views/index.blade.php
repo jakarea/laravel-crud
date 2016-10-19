@@ -181,17 +181,9 @@
 	   	  <div class="col_3">
 	   	  	<h3>Todays Jobs</h3>
 	   	  	<ul class="list_1">
-	   	  		<li><a href="#">Department of Health - Western Australia</a></li>
-	   	  		<li><a href="#">Australian Nursing Agency currently require experiences</a></li>		
-	   	  		<li><a href="#">Russia Nursing Agency currently require experiences</a></li>
-	   	  		<li><a href="#">The Government of Western Saudi Arbia</a></li>		
-	   	  		<li><a href="#">Department of Health - Western Australia</a></li>
-	   	  		<li><a href="#">Australian Nursing Agency currently require experiences</a></li>		
-	   	  		<li><a href="#">Russia Nursing Agency currently require experiences</a></li>
-	   	  		<li><a href="#">The Scientific Publishing Services in Saudi Arbia</a></li>	
-	   	  		<li><a href="#">BPO Private Limited in Canada</a></li>		
-	   	  		<li><a href="#">Executive Tracks Associates in Pakistan</a></li>
-	   	  		<li><a href="#">Pyramid IT Consulting Pvt. Ltd. in Pakistan</a></li>						
+		   	  	@foreach($todaysJobs as $job)
+		   	  		<li><a href="{!! url('job/'.$job->job_id) !!}">{!! $job->jobtitle !!}</a></li>
+		   	  	@endforeach					
 	   	  	</ul>
 	   	  </div>
 	   	  <div class="col_3">
@@ -251,7 +243,7 @@
 						<a href="single.html"><img src="http://www.jobportal.dev/assets/images/a{!! rand(1,6);!!}.jpg" class="img-responsive" alt=""></a>
 					</div>
 					<div class="col-sm-8 row_1">
-						<h4><a href="{!! url("job/".$job->job_id) !!}">{!! $job->jobtitle !!}</a></h4>
+						<h4><a href="{!! url('job/'.$job->job_id) !!}">{!! $job->jobtitle !!}</a></h4>
 						<h6>Deadline <span class="dot">·</span> {!! $job->deadline !!}</h6>
 						<p>{!! $job->jobdescription !!}</p>
 						<div class="social">	
