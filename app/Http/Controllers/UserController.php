@@ -16,7 +16,7 @@ class UserController extends Controller
     //view after login a user
     public function index()
     {   
-    	return view('dashboard');
+    	return view('admin.dashboard');
     }
 
     //view the login user profile

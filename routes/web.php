@@ -20,7 +20,7 @@ Route::resource('job','JobController');
 Route::get('/dashboard', [
 	'uses' => 'UserController@index',
 	'as' => 'dashboard',
-	'middleware' => ['auth', 'roles'],
+	'middleware' => ['auth'],
 	'roles' => ['admin', 'student', 'employee']
 ]);
 
