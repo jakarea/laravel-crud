@@ -11,9 +11,17 @@
 |
 */
 
+Auth::routes();
 Route::get('/','IndexController@index');
+Route::get('/home', 'HomeController@index');
 Route::resource('job','JobController');
 
+//for all type of users to view dashboard
+Route::get('/dashboard', [
+	'uses' => 'UserController@index',
+	'as' => 'dashboard',
+	'middleware' => ['auth', 'roles'],
+	'roles' => ['admin', 'student', 'employee']
+]);
 
 
-Route::get('admin','AdminController@index');

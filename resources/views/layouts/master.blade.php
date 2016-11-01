@@ -109,7 +109,21 @@
 								<li><a href="jobs.html">Defence Jobs</a></li>
 							</ul>
 						</li>
-						<li><a href="login.html">Login</a></li>
+						@if (Auth::guest())
+							<li><a href="{!! url('/login') !!}">Login</a></li>
+						@else
+							<li>
+                                <a href="{{ url('/logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                                
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+						@endif
 						<li><a href="resume.html">Upload Resume</a></li>
 					</ul>
 				</div>
