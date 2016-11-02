@@ -7,10 +7,9 @@
         <div class="col-sm-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Basic Table
+                    Users Table
                     <span class="tools pull-right">
                         <a href="javascript:;" class="fa fa-chevron-down"></a>
-                        <a href="javascript:;" class="fa fa-cog"></a>
                         <a href="javascript:;" class="fa fa-times"></a>
                      </span>
                 </header>
@@ -19,30 +18,30 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th class="text-center">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($users as $user)
                         <tr>
                             <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>{!! $user->name !!}</td>
+                            <td>{!! $user->email !!}</td>
+                            <td>
+                                @foreach($user->roles as $role)
+                                    <span class="label label-info">{!! $role->name !!}</span>
+                                @endforeach
+                            </td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-info btn-sm"> <i class="fa fa-eye"></i> View</button>
+                                <button type="button" class="btn btn-warning btn-sm"> <i class="fa fa-edit"></i> Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o"></i> Delete</button>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

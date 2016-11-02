@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Role;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -27,7 +28,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function info(){
+        return $this->hasOne('App\UserInfo');
+    }
+
      public function roles(){
-            return $this->belongsToMany('App\Role', 'user_role', 'user_id', 'role_id');
+            return $this->belongsToMany('App\Role');
         }
 }

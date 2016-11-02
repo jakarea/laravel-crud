@@ -55,11 +55,11 @@ a:hover {
 }
 
 .label-info {
-    background-color: #8175c7;
+    background-color: #2D89EF;
 }
 
 .label-warning {
-    background-color: #FCB322;
+    background-color: #FFC40D;
 }
 
 .label-danger {
@@ -223,6 +223,15 @@ ul {
     box-shadow: none !important;
 }
 
+.btn {
+    border-radius: 0px!important;
+    -webkit-border-radius: 0px!important;
+}
+.label {
+     border-radius: 0px!important;
+    -webkit-border-radius: 0px!important;
+}
+
 /*Rounded Button*/
 
 .btn-round {
@@ -378,6 +387,9 @@ ul {
 
 
 /*--*/
+.form-control{
+    border-radius: 0px;
+}
 
 .has-success .form-control:focus, .has-error .form-control:focus, .has-warning .form-control:focus {
     box-shadow: none;

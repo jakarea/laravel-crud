@@ -9,30 +9,28 @@ use App\Http\Requests;
 use Auth;
 use App\User;
 use App\UserInfo;
-use App\Room;
 
 class UserController extends Controller
 {
     //view after login a user
     public function index()
     {   
-    	return view('admin.dashboard');
+       return view('admin.dashboard');
     }
-
 
     //show all userlist
     public function getIndex()
     {   
-        return view('admin.user.all');
+        $users = User::with('roles')->orderBy('id','desc')->paginate(12);
+        return view('admin.user.all',compact('users'));
     }
 
-    //view the login user profile
-    public function getProfile()
-    {   
-        $user = UserInfo::where('user_id', Auth::user()->id)->first();
-        //dd();
-        return view('profile', compact('user'));
+    //Edit users profile
+    public function getEdit($id){
+        $user = User::with('roles','info')->findOrFail($id);
+        return view('admin.user.edit',compact('user'));
     }
+
 
     //view the login user's profile edit view
     public function getEditProfile()
@@ -101,13 +99,7 @@ class UserController extends Controller
         return view('admin.employee-infos', compact('employees'));
     }
 
-    //user can view who are the hall manager for current month
-    public function getHallManager()
-    {
-        $hall_managers = UserInfo::where('hall_manager', true)->get();
-        return view('admin.hall-manager-infos', compact('hall_managers'));
-    }
-
+    
     //user can view change password page
     public function getChangePassword()
     {
@@ -129,7 +121,5 @@ class UserController extends Controller
         $user->save();
 
         return back()->with(['success' => 'Your password is changed']);
-
     }
-
 }

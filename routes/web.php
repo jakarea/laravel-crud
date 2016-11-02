@@ -31,4 +31,11 @@ Route::get('users', [
 	'roles' => ['admin', 'student', 'employee']
 ]);
 
+Route::get('user/edit/{id}', [
+	'uses' => 'UserController@getEdit',
+	'as' => 'user/edit',
+	'middleware' => ['auth'],
+	'roles' => ['admin', 'student', 'employee']
+]);
+
 

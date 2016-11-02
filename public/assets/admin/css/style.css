@@ -398,8 +398,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     width:300px !important;
     padding:0 10px;
     box-shadow:0 0px 5px rgba(0,0,0,0.1) !important;
-    border-radius:5px;
-    -webkit-border-radius:5px;
+    border-radius:0px;
+    -webkit-border-radius:0px;
     background:#fff;
     border:none;
     left:-10px;
@@ -581,7 +581,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 .dropdown-menu.extended.logout>li>a:hover {
     background:#F1F2F7 !important;
-    border-radius:5px;
+    border-radius:0px;
 }
 .dropdown-menu.extended.logout>li>a:hover i {
     color:#32D2C9;
@@ -597,8 +597,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     color:#555555;
 }
 .top-nav ul.top-menu>li>a {
-    border-radius:100px;
-    -webkit-border-radius:100px;
+    border-radius:0px;
+    -webkit-border-radius:0px;
     padding:0px;
     background:none;
     margin-right:0;
@@ -627,7 +627,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     border:1px solid #f6f6f6;
     background:#f6f6f6 !important;
     border-radius:100px;
-    -webkit-border-radius:100px;
+    -webkit-border-radius:0px;
 }
 .top-nav .dropdown-menu.extended.logout {
     top:50px;
@@ -673,8 +673,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     background:#f6f6f6 url("../images/search-icon.png") no-repeat 10px 8px;
     padding:0 5px 0 30px;
     color:#fff;
-    border-radius:100px;
-    -webkit-border-radius:100px;
+    border-radius:0px;
+    -webkit-border-radius:0px;
 }
 .search:focus {
     width:180px;
@@ -697,8 +697,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     margin-top:23px;
     margin-left:-15px;
     background:#32d2c9;
-    border-radius:50%;
-    -webkit-border-radius:50%;
+    border-radius:0%;
+    -webkit-border-radius:0%;
     width:32px;
     height:32px;
     position:absolute;
@@ -741,8 +741,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 .toggle-right-box {
     float:left;
     background:#f6f6f6;
-    border-radius:50%;
-    -webkit-border-radius:50%;
+    border-radius:0%;
+    -webkit-border-radius:0%;
     width:35px;
     height:35px;
 }
@@ -847,8 +847,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     margin:0 10px 0 20px;
 }
 .user-thumb img {
-    border-radius:50%;
-    -webkit-border-radius:50%;
+    border-radius:0%;
+    -webkit-border-radius:0%;
     width:30px;
     height:30px;
 }
