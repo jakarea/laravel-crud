@@ -1,279 +1,218 @@
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="container-fluid">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href="index.html"><span>Metro</span></a>
-			<!-- start: Header Menu -->
-			<div class="nav-no-collapse header-nav">
-				<ul class="nav pull-right">
-					<li class="dropdown hidden-phone">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="halflings-icon white warning-sign"></i>
-						</a>
-						<ul class="dropdown-menu notifications">
-							<li class="dropdown-menu-title">
-								<span>You have 11 notifications</span>
-								<a href="#refresh"><i class="icon-repeat"></i></a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon blue"><i class="icon-user"></i></span>
-								<span class="message">New user registration</span>
-								<span class="time">1 min</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon green"><i class="icon-comment-alt"></i></span>
-								<span class="message">New comment</span>
-								<span class="time">7 min</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon green"><i class="icon-comment-alt"></i></span>
-								<span class="message">New comment</span>
-								<span class="time">8 min</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon green"><i class="icon-comment-alt"></i></span>
-								<span class="message">New comment</span>
-								<span class="time">16 min</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon blue"><i class="icon-user"></i></span>
-								<span class="message">New user registration</span>
-								<span class="time">36 min</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon yellow"><i class="icon-shopping-cart"></i></span>
-								<span class="message">2 items sold</span>
-								<span class="time">1 hour</span> 
-								</a>
-							</li>
-							<li class="warning">
-								<a href="#">
-								<span class="icon red"><i class="icon-user"></i></span>
-								<span class="message">User deleted account</span>
-								<span class="time">2 hour</span> 
-								</a>
-							</li>
-							<li class="warning">
-								<a href="#">
-								<span class="icon red"><i class="icon-shopping-cart"></i></span>
-								<span class="message">New comment</span>
-								<span class="time">6 hour</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon green"><i class="icon-comment-alt"></i></span>
-								<span class="message">New comment</span>
-								<span class="time">yesterday</span> 
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="icon blue"><i class="icon-user"></i></span>
-								<span class="message">New user registration</span>
-								<span class="time">yesterday</span> 
-								</a>
-							</li>
-							<li class="dropdown-menu-sub-footer">
-								<a>View all notifications</a>
-							</li>
-						</ul>
-					</li>
-					<!-- start: Notifications Dropdown -->
-					<li class="dropdown hidden-phone">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="halflings-icon white tasks"></i>
-						</a>
-						<ul class="dropdown-menu tasks">
-							<li class="dropdown-menu-title">
-								<span>You have 17 tasks in progress</span>
-								<a href="#refresh"><i class="icon-repeat"></i></a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="header">
-									<span class="title">iOS Development</span>
-									<span class="percent"></span>
-									</span>
-									<div class="taskProgress progressSlim red">80</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="header">
-									<span class="title">Android Development</span>
-									<span class="percent"></span>
-									</span>
-									<div class="taskProgress progressSlim green">47</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="header">
-									<span class="title">ARM Development</span>
-									<span class="percent"></span>
-									</span>
-									<div class="taskProgress progressSlim yellow">32</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="header">
-									<span class="title">ARM Development</span>
-									<span class="percent"></span>
-									</span>
-									<div class="taskProgress progressSlim greenLight">63</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="header">
-									<span class="title">ARM Development</span>
-									<span class="percent"></span>
-									</span>
-									<div class="taskProgress progressSlim orange">80</div>
-								</a>
-							</li>
-							<li>
-								<a class="dropdown-menu-sub-footer">View all tasks</a>
-							</li>
-						</ul>
-					</li>
-					<!-- end: Notifications Dropdown -->
-					<!-- start: Message Dropdown -->
-					<li class="dropdown hidden-phone">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="halflings-icon white envelope"></i>
-						</a>
-						<ul class="dropdown-menu messages">
-							<li class="dropdown-menu-title">
-								<span>You have 9 messages</span>
-								<a href="#refresh"><i class="icon-repeat"></i></a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="avatar">{!! Html::image('assets/admin/img/avatar.jpg') !!}</span>
-								<span class="header">
-								<span class="from">
-								Dennis Ji
-								</span>
-								<span class="time">
-								6 min
-								</span>
-								</span>
-								<span class="message">
-								Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-								</span>  
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="avatar">{!! Html::image('assets/admin/img/avatar.jpg') !!}"</span>\
-								<span class="header">
-								<span class="from">
-								Dennis Ji
-								</span>
-								<span class="time">
-								56 min
-								</span>
-								</span>
-								<span class="message">
-								Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-								</span>  
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="avatar">{!! Html::image('assets/admin/img/avatar.jpg') !!}</span>
-								<span class="header">
-								<span class="from">
-								Dennis Ji
-								</span>
-								<span class="time">
-								3 hours
-								</span>
-								</span>
-								<span class="message">
-								Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-								</span>  
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="avatar">{!! Html::image('assets/admin/img/avatar.jpg') !!}</span>
-								<span class="header">
-								<span class="from">
-								Dennis Ji
-								</span>
-								<span class="time">
-								yesterday
-								</span>
-								</span>
-								<span class="message">
-								Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-								</span>  
-								</a>
-							</li>
-							<li>
-								<a href="#">
-								<span class="avatar">{!! Html::image('assets/admin/img/avatar.jpg') !!}</span>
-								<span class="header">
-								<span class="from">
-								Dennis Ji
-								</span>
-								<span class="time">
-								Jul 25, 2012
-								</span>
-								</span>
-								<span class="message">
-								Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-								</span>  
-								</a>
-							</li>
-							<li>
-								<a class="dropdown-menu-sub-footer">View all messages</a>
-							</li>
-						</ul>
-					</li>
-					<!-- end: Message Dropdown -->
-					<li>
-						<a class="btn" href="#">
-						<i class="halflings-icon white wrench"></i>
-						</a>
-					</li>
-					<!-- start: User Dropdown -->
-					<li class="dropdown">
-						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="halflings-icon white user"></i> Dennis Ji
-						<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li class="dropdown-menu-title">
-								<span>Account Settings</span>
-							</li>
-							<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-							<li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
-						</ul>
-					</li>
-					<!-- end: User Dropdown -->
-				</ul>
-			</div>
-			<!-- end: Header Menu -->
-		</div>
-	</div>
-</div>
+<!--header start-->
+            <header class="header fixed-top clearfix">
+                <!--logo start-->
+                <div class="brand">
+                    <a href="index-2.html" class="logo">
+                    {!! Html::image('assets/admin/images/logo.png') !!}
+                    </a>
+                    <div class="sidebar-toggle-box">
+                        <div class="fa fa-bars"></div>
+                    </div>
+                </div>
+                <!--logo end-->
+                <div class="nav notify-row" id="top_menu">
+                    <!--  notification start -->
+                    <ul class="nav top-menu">
+                        <!-- settings start -->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge bg-success">8</span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <li>
+                                    <p class="">You have 8 pending tasks</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info clearfix">
+                                            <div class="desc pull-left">
+                                                <h5>Target Sell</h5>
+                                                <p>25% , Deadline  12 June’13</p>
+                                            </div>
+                                            <span class="notification-pie-chart pull-right" data-percent="45">
+                                            <span class="percent"></span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info clearfix">
+                                            <div class="desc pull-left">
+                                                <h5>Product Delivery</h5>
+                                                <p>45% , Deadline  12 June’13</p>
+                                            </div>
+                                            <span class="notification-pie-chart pull-right" data-percent="78">
+                                            <span class="percent"></span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info clearfix">
+                                            <div class="desc pull-left">
+                                                <h5>Payment collection</h5>
+                                                <p>87% , Deadline  12 June’13</p>
+                                            </div>
+                                            <span class="notification-pie-chart pull-right" data-percent="60">
+                                            <span class="percent"></span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info clearfix">
+                                            <div class="desc pull-left">
+                                                <h5>Target Sell</h5>
+                                                <p>33% , Deadline  12 June’13</p>
+                                            </div>
+                                            <span class="notification-pie-chart pull-right" data-percent="90">
+                                            <span class="percent"></span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="external">
+                                    <a href="#">See All Tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- settings end -->
+                        <!-- inbox dropdown start-->
+                        <li id="header_inbox_bar" class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-important">4</span>
+                            </a>
+                            <ul class="dropdown-menu extended inbox">
+                                <li>
+                                    <p class="red">You have 4 Mails</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span class="photo">{!! Html::image('assets/admin/images/avatar-mini.jpg') !!}
+                                    <span class="subject">
+                                    <span class="from">Jonathan Smith</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                    Hello, this is an example msg.
+                                    </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span class="photo">{!! Html::image('assets/admin/images/avatar-mini-2.jpg') !!}
+                                    <span class="subject">
+                                    <span class="from">Jane Doe</span>
+                                    <span class="time">2 min ago</span>
+                                    </span>
+                                    <span class="message">
+                                    Nice admin template
+                                    </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span class="photo">{!! Html::image('assets/admin/images/avatar-mini-3.jpg') !!}
+                                    <span class="subject">
+                                    <span class="from">Tasi sam</span>
+                                    <span class="time">2 days ago</span>
+                                    </span>
+                                    <span class="message">
+                                    This is an example msg.
+                                    </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span class="photo">{!! Html::image('assets/admin/images/avatar-mini.jpg') !!}</span>
+                                    <span class="subject">
+                                    <span class="from">Mr. Perfect</span>
+                                    <span class="time">2 hour ago</span>
+                                    </span>
+                                    <span class="message">
+                                    Hi there, its a test
+                                    </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">See all messages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- inbox dropdown end -->
+                        <!-- notification dropdown start-->
+                        <li id="header_notification_bar" class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="badge bg-warning">3</span>
+                            </a>
+                            <ul class="dropdown-menu extended notification">
+                                <li>
+                                    <p>Notifications</p>
+                                </li>
+                                <li>
+                                    <div class="alert alert-info clearfix">
+                                        <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                        <div class="noti-info">
+                                            <a href="#"> Server #1 overloaded.</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="alert alert-danger clearfix">
+                                        <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                        <div class="noti-info">
+                                            <a href="#"> Server #2 overloaded.</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="alert alert-success clearfix">
+                                        <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                        <div class="noti-info">
+                                            <a href="#"> Server #3 overloaded.</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- notification dropdown end -->
+                    </ul>
+                    <!--  notification end -->
+                </div>
+                <div class="top-nav clearfix">
+                    <!--search & user info start-->
+                    <ul class="nav pull-right top-menu">
+                        <li>
+                            <input type="text" class="form-control search" placeholder=" Search">
+                        </li>
+                        <!-- user login dropdown start-->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
+                                <!--<img alt="" src="images/avatar1_small.jpg">-->
+                                <i class="fa fa-user"></i>
+                                <span class="username">John Doe</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                            </ul>
+                        </li>
+                        <!-- user login dropdown end -->
+                        <li>
+                            <div class="toggle-right-box">
+                                <div class="fa fa-bars"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--search & user info end-->
+                </div>
+            </header>
+            <!--header end-->

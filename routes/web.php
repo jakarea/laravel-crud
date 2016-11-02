@@ -24,4 +24,11 @@ Route::get('/dashboard', [
 	'roles' => ['admin', 'student', 'employee']
 ]);
 
+Route::get('users', [
+	'uses' => 'UserController@getIndex',
+	'as' => 'users',
+	'middleware' => ['auth'],
+	'roles' => ['admin', 'student', 'employee']
+]);
+
 

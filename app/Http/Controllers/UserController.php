@@ -19,6 +19,13 @@ class UserController extends Controller
     	return view('admin.dashboard');
     }
 
+
+    //show all userlist
+    public function getIndex()
+    {   
+        return view('admin.user.all');
+    }
+
     //view the login user profile
     public function getProfile()
     {   

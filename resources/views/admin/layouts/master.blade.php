@@ -1,134 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- start: Meta -->
-		<meta charset="utf-8">
-		<title>@yield('title')</title>
-		<meta name="description" content="Bootstrap Metro Dashboard">
-		<meta name="author" content="Dennis Ji">
-		<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-		<!-- end: Meta -->
-		<!-- start: Mobile Specific -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- end: Mobile Specific -->
-		<!-- start: CSS -->
-		{!! Html::style('assets/admin/css/bootstrap.min.css',array('id'=>'bootstrap-style')) !!}
-		{!! Html::style('assets/admin/css/bootstrap-responsive.min.css') !!}
-		{!! Html::style('assets/admin/css/style.css') !!}
-		{!! Html::style('assets/admin/css/style-responsive.css') !!}
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-		<!-- end: CSS -->
-		<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js') !!}
-			{!! Html::style('assets/admin/css/ie.css',array('id'=>'ie-style')) !!}
-		<![endif]-->
-		<!--[if IE 9]>
-			{!! Html::style('assets/admin/css/ie9.css',array('id'=>'ie9style')) !!}
-			<![endif]-->
-		<!-- start: Favicon -->
-		<!-- end: Favicon -->
-	</head>
-	<body>
-		<!-- start: Header -->
-		@include('admin.partial.nav')
-				<!-- start: Header -->
-		<div class="container-fluid-full">
-			<div class="row-fluid">
-				<!-- start: Main Menu -->
-				<div id="sidebar-left" class="span2">
-					<div class="nav-collapse sidebar-nav">
-						<ul class="nav nav-tabs nav-stacked main-menu">
-							<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Jakarea Parvez</span></a></li>
-							<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
-							<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
-							<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
-							<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
-							<li>
-								<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>
-								<ul>
-									<li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
-									<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
-									<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
-								</ul>
-							</li>
-							<li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
-							<li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
-							<li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
-							<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-							<li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
-							<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
-							<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
-							<li><a href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
-							<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- end: Main Menu -->
-				<noscript>
-					<div class="alert alert-block span10">
-						<h4 class="alert-heading">Warning!</h4>
-						<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
-					</div>
-				</noscript>
-				<!-- start: Content -->
-				@yield('content')
-								<!--/.fluid-container-->
-				<!-- end: Content -->
-			</div>
-			<!--/#content.span10-->
-		</div>
-		<!--/fluid-row-->
-		<div class="modal hide fade" id="myModal">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">×</button>
-				<h3>Settings</h3>
-			</div>
-			<div class="modal-body">
-				<p>Here settings can be configured...</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">Close</a>
-				<a href="#" class="btn btn-primary">Save changes</a>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<footer>
-			<p>
-				<span style="text-align:left;float:left">&copy; 2013 <a href="http://jiji262.github.io/Bootstrap_Metro_Dashboard/" alt="Bootstrap_Metro_Dashboard">Bootstrap Metro Dashboard</a></span>
-			</p>
-		</footer>
-		<!-- start: JavaScript-->
-		{!! Html::script('assets/admin/js/jquery-1.9.1.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery-migrate-1.0.0.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery-ui-1.10.0.custom.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.ui.touch-punch.js') !!}
-		{!! Html::script('assets/admin/js/modernizr.js') !!}
-		{!! Html::script('assets/admin/js/bootstrap.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.cookie.js') !!}
-		{!! Html::script('assets/admin/js/fullcalendar.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.dataTables.min.js') !!}
-		{!! Html::script('assets/admin/js/excanvas.js') !!}
-		{!! Html::script('assets/admin/js/jquery.flot.js') !!}
-		{!! Html::script('assets/admin/js/jquery.flot.pie.js') !!}
-		{!! Html::script('assets/admin/js/jquery.flot.stack.js') !!}
-		{!! Html::script('assets/admin/js/jquery.flot.resize.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.chosen.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.uniform.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.cleditor.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.noty.js') !!}
-		{!! Html::script('assets/admin/js/jquery.elfinder.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.raty.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.iphone.toggle.js') !!}
-		{!! Html::script('assets/admin/js/jquery.uploadify-3.1.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.gritter.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.imagesloaded.js') !!}
-		{!! Html::script('assets/admin/js/jquery.masonry.min.js') !!}
-		{!! Html::script('assets/admin/js/jquery.knob.modified.js') !!}
-		{!! Html::script('assets/admin/js/jquery.sparkline.min.js') !!}
-		{!! Html::script('assets/admin/js/counter.js') !!}
-		{!! Html::script('assets/admin/js/retina.js') !!}
-		{!! Html::script('assets/admin/js/custom.js') !!}
-		<!-- end: JavaScript-->
-	</body>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="ThemeBucket">
+        <link rel="shortcut icon" href="images/favicon.html">
+        <title>@yield('title') </title>
+        <!--Core CSS -->
+        {!! Html::style('assets/admin/css/bootstrap.min.css') !!}
+        {!! Html::style('assets/admin/css/bootstrap-reset.css') !!}
+        {!! Html::style('assets/admin/css/font-awesome.css') !!}
+        <!-- Custom styles for this template -->
+        {!! Html::style('assets/admin/css/style.css') !!}
+        {!! Html::style('assets/admin/css/style-responsive.css') !!}
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]>
+        <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <section id="container" >
+            @include('admin.partial.nav')
+            @include('admin.partial.sidebar')
+           
+            <!--main content start-->
+            <section id="main-content">
+                <section class="wrapper">
+                    <!-- page start-->
+                    <div class="row">
+                        @yield('content')
+                        
+                    </div>
+                    <!-- page end-->
+                </section>
+            </section>
+            <!--main content end-->
+            <!--right sidebar start-->
+            <div class="right-sidebar">
+                <div class="search-row">
+                    <input type="text" placeholder="Search" class="form-control">
+                </div>
+                <div class="right-stat-bar">
+                    <ul class="right-side-accordion">
+                        <li class="widget-collapsible">
+                            <a href="#" class="head widget-head red-bg active clearfix">
+                            <span class="pull-left">work progress (5)</span>
+                            <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+                            </a>
+                            <ul class="widget-container">
+                                <li>
+                                    <div class="prog-row side-mini-stat clearfix">
+                                        <div class="side-graph-info">
+                                            <h4>Target sell</h4>
+                                            <p>
+                                                25%, Deadline 12 june 13
+                                            </p>
+                                        </div>
+                                        <div class="side-mini-graph">
+                                            <div class="target-sell">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row side-mini-stat">
+                                        <div class="side-graph-info">
+                                            <h4>product delivery</h4>
+                                            <p>
+                                                55%, Deadline 12 june 13
+                                            </p>
+                                        </div>
+                                        <div class="side-mini-graph">
+                                            <div class="p-delivery">
+                                                <div class="sparkline" data-type="bar" data-resize="true" data-height="30" data-width="90%" data-bar-color="#39b7ab" data-bar-width="5" data-data="[200,135,667,333,526,996,564,123,890,564,455]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row side-mini-stat">
+                                        <div class="side-graph-info payment-info">
+                                            <h4>payment collection</h4>
+                                            <p>
+                                                25%, Deadline 12 june 13
+                                            </p>
+                                        </div>
+                                        <div class="side-mini-graph">
+                                            <div class="p-collection">
+                                                <span class="pc-epie-chart" data-percent="45">
+                                                <span class="percent"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row side-mini-stat">
+                                        <div class="side-graph-info">
+                                            <h4>delivery pending</h4>
+                                            <p>
+                                                44%, Deadline 12 june 13
+                                            </p>
+                                        </div>
+                                        <div class="side-mini-graph">
+                                            <div class="d-pending">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row side-mini-stat">
+                                        <div class="col-md-12">
+                                            <h4>total progress</h4>
+                                            <p>
+                                                50%, Deadline 12 june 13
+                                            </p>
+                                            <div class="progress progress-xs mtop10">
+                                                <div style="width: 50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                                                    <span class="sr-only">50% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="widget-collapsible">
+                            <a href="#" class="head widget-head terques-bg active clearfix">
+                            <span class="pull-left">contact online (5)</span>
+                            <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+                            </a>
+                            <ul class="widget-container">
+                                <li>
+                                    <div class="prog-row">
+                                        <div class="user-thumb">
+                                            <a href="#">{!! Html::image('assets/admin/images/avatar1_small.jpg') !!}</a>
+                                        </div>
+                                        <div class="user-details">
+                                            <h4><a href="#">Jonathan Smith</a></h4>
+                                            <p>
+                                                Work for fun
+                                            </p>
+                                        </div>
+                                        <div class="user-status text-danger">
+                                            <i class="fa fa-comments-o"></i>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row">
+                                        <div class="user-thumb">
+                                            <a href="#">{!! Html::image('assets/admin/images/avatar1.jpg') !!}</a>
+                                        </div>
+                                        <div class="user-details">
+                                            <h4><a href="#">Anjelina Joe</a></h4>
+                                            <p>
+                                                Available
+                                            </p>
+                                        </div>
+                                        <div class="user-status text-success">
+                                            <i class="fa fa-comments-o"></i>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row">
+                                        <div class="user-thumb">
+                                            <a href="#">{!! Html::image('assets/admin/images/chat-avatar2.jpg') !!}</a>
+                                        </div>
+                                        <div class="user-details">
+                                            <h4><a href="#">John Doe</a></h4>
+                                            <p>
+                                                Away from Desk
+                                            </p>
+                                        </div>
+                                        <div class="user-status text-warning">
+                                            <i class="fa fa-comments-o"></i>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row">
+                                        <div class="user-thumb">
+                                            <a href="#">{!! Html::image('assets/admin/images/avatar1_small.jpg') !!}</a>
+                                        </div>
+                                        <div class="user-details">
+                                            <h4><a href="#">Mark Henry</a></h4>
+                                            <p>
+                                                working
+                                            </p>
+                                        </div>
+                                        <div class="user-status text-info">
+                                            <i class="fa fa-comments-o"></i>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row">
+                                        <div class="user-thumb">
+                                            <a href="#">{!! Html::image('assets/admin/images/avatar1.jpg') !!}</a>
+                                        </div>
+                                        <div class="user-details">
+                                            <h4><a href="#">Shila Jones</a></h4>
+                                            <p>
+                                                Work for fun
+                                            </p>
+                                        </div>
+                                        <div class="user-status text-danger">
+                                            <i class="fa fa-comments-o"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-center">
+                                        <a href="#" class="view-btn">View all Contacts</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="widget-collapsible">
+                            <a href="#" class="head widget-head purple-bg active">
+                            <span class="pull-left"> recent activity (3)</span>
+                            <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+                            </a>
+                            <ul class="widget-container">
+                                <li>
+                                    <div class="prog-row">
+                                        <div class="user-thumb rsn-activity">
+                                            <i class="fa fa-clock-o"></i>
+                                        </div>
+                                        <div class="rsn-details ">
+                                            <p class="text-muted">
+                                                just now
+                                            </p>
+                                            <p>
+                                                <a href="#">Jim Doe </a>Purchased new equipments for zonal office setup
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row">
+                                        <div class="user-thumb rsn-activity">
+                                            <i class="fa fa-clock-o"></i>
+                                        </div>
+                                        <div class="rsn-details ">
+                                            <p class="text-muted">
+                                                2 min ago
+                                            </p>
+                                            <p>
+                                                <a href="#">Jane Doe </a>Purchased new equipments for zonal office setup
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="prog-row">
+                                        <div class="user-thumb rsn-activity">
+                                            <i class="fa fa-clock-o"></i>
+                                        </div>
+                                        <div class="rsn-details ">
+                                            <p class="text-muted">
+                                                1 day ago
+                                            </p>
+                                            <p>
+                                                <a href="#">Jim Doe </a>Purchased new equipments for zonal office setup
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="widget-collapsible">
+                            <a href="#" class="head widget-head yellow-bg active">
+                            <span class="pull-left"> shipment status</span>
+                            <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+                            </a>
+                            <ul class="widget-container">
+                                <li>
+                                    <div class="col-md-12">
+                                        <div class="prog-row">
+                                            <p>
+                                                Full sleeve baby wear (SL: 17665)
+                                            </p>
+                                            <div class="progress progress-xs mtop10">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prog-row">
+                                            <p>
+                                                Full sleeve baby wear (SL: 17665)
+                                            </p>
+                                            <div class="progress progress-xs mtop10">
+                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                                    <span class="sr-only">70% Completed</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--right sidebar end-->
+        </section>
+        <!-- Placed js at the end of the document so the pages load faster -->
+        <!--Core js-->
+        {!! Html::script('assets/admin/js/jquery.js') !!}
+        {!! Html::script('assets/admin/js/bootstrap.min.js') !!}
+        {!! Html::script('assets/admin/js/jquery.dcjqaccordion.2.7.js',['class'=>'include','type'=>'text/javascript']) !!} 
+
+        {!! Html::script('assets/admin/js/jquery.nicescroll.js') !!}
+               <!--common script init for all pages-->
+        {!! Html::script('assets/admin/js/scripts.js') !!}
+    </body>
+    
 </html>
