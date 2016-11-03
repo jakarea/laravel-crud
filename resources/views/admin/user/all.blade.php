@@ -36,9 +36,12 @@
                                 @endforeach
                             </td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-info btn-sm"> <i class="fa fa-eye"></i> View</button>
-                                <button type="button" class="btn btn-warning btn-sm"> <i class="fa fa-edit"></i> Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o"></i> Delete</button>
+                                <a href="user/{!! $user->id; !!}"><button type="button" class="btn btn-info btn-sm"> <i class="fa fa-eye"></i> View </button>
+                                </a>
+                                <a href="user/edit/{!! $user->id; !!}"><button type="button" class="btn btn-warning btn-sm"> <i class="fa fa-edit"></i> Edit </button>
+                                </a>
+                                <a href="user/delete/{!! $user->id; !!}"><button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o"></i> Delete </button>
+                                </a>
                             </td>
                         </tr>
                         @endforeach

@@ -31,9 +31,30 @@ Route::get('users', [
 	'roles' => ['admin', 'student', 'employee']
 ]);
 
+Route::get('user/{id}', [
+	'uses' => 'UserController@getShow',
+	'as' => 'user',
+	'middleware' => ['auth'],
+	'roles' => ['admin', 'student', 'employee']
+]);
+
 Route::get('user/edit/{id}', [
 	'uses' => 'UserController@getEdit',
 	'as' => 'user/edit',
+	'middleware' => ['auth','roles'],
+	'roles' => ['Pending', 'Employee','Editor']
+]);
+
+Route::post('user/edit/{id}', [
+	'uses' => 'UserController@getEdit',
+	'as' => 'user/edit',
+	'middleware' => ['auth'],
+	'roles' => ['admin', 'student', 'employee']
+]);
+
+Route::get('user/delete/{id}', [
+	'uses' => 'UserController@getEdit',
+	'as' => 'user/delete',
 	'middleware' => ['auth'],
 	'roles' => ['admin', 'student', 'employee']
 ]);

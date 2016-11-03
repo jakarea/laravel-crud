@@ -26,6 +26,13 @@ class UserController extends Controller
     }
 
     //Edit users profile
+    public function getShow($id){
+        $user = User::with('roles','info')->findOrFail($id);
+        
+        print_r($user);exit;
+        return view('admin.user.edit',compact('user'));
+    }
+//Edit users profile
     public function getEdit($id){
         $user = User::with('roles','info')->findOrFail($id);
         return view('admin.user.edit',compact('user'));

@@ -196,7 +196,7 @@
                             <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
                                 <!--<img alt="" src="images/avatar1_small.jpg">-->
                                 <i class="fa fa-user"></i>
-                                <span class="username">John Doe</span>
+                                <span class="username">{!! Auth::user()->name !!}</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
